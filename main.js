@@ -29,17 +29,54 @@ function updateCoffees(e) {
         }
     });
     // This for each loop adds search functionality for EXACT coffee name submission ----
-    coffees.forEach(function(coffee) {
-         if (coffee.name === coffeeName && coffee.roast === selectedRoast) {
-            filteredCoffees = [];
-            filteredCoffees.push(coffee);
-         } else if (coffee.name === coffeeName && coffee.roast !== selectedRoast) {
-             filteredCoffees = [];
-         }
-    });
+    // coffees.forEach(function(coffee) {
+    //      if (coffee.name === coffeeName && coffee.roast === selectedRoast) {
+    //         filteredCoffees = [];
+    //         filteredCoffees.push(coffee);
+    //      } else if (coffee.name === coffeeName && coffee.roast !== selectedRoast) {
+    //          filteredCoffees = [];
+    //      }
+    // });
     // ---------------------------------------------------------------------------------
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function searchBar() {
+    var names = coffees.name;
+    var input = document.getElementById('coffee-text');
+    var filter = input.value.toUpperCase();
+
+    for (var i = 0; i < coffees.length; ++i) {
+        if (names.toUpperCase().indexOf(filter) > -1) {
+            names[i].style.display = "";
+        }else {
+            names[i].style.display = "none";
+        }
+    }
+}
+
+
+
+// function myFunction() {
+//     // Declare variables
+//     var input, filter, ul, li, a, i, txtValue, names;
+//     input = document.getElementById('coffee-text');
+//     filter = input.value.toUpperCase();
+//     names = coffees.name;
+//     ul = document.getElementsByClassName('coffee');
+//     li = ul.getElementsByTagName('div');
+//
+//     // Loop through all list items, and hide those who don't match the search query
+//     for (i = 0; i < names.length; i++) {
+//         a = li[i].getElementsByTagName("h2")[0];
+//          = names;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
