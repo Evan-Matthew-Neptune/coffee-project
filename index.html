@@ -13,12 +13,23 @@
     <form>
         <label for="roast-selection">Roast Selector</label>
         <select id="roast-selection">
+            <option id="all">all</option>
             <option id="light">light</option>
             <option id="medium">medium</option>
             <option id="dark">dark</option>
         </select>
-        <input type="text" onkeyup="searchBar()" id="coffee-text">
+        <input type="text" id="coffee-text">
         <input id="submit" type="submit" />
+    </form>
+    <form>
+        <label for="new-coffee-roast">Roast</label>
+        <select id="new-coffee-roast">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input type="text" id="new-coffee-name">
+        <input id="" type="submit" />
     </form>
 
     <table>
