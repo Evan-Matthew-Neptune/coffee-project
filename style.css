@@ -4,25 +4,32 @@ body {
     background-size: cover;
     background-attachment: fixed;
     box-sizing: border-box;
+    font-weight: bold;
 }
-#new-coffee {
-    /*width: border-box;*/
-}
-/*.coffee {*/
-/*    border: solid black 1px;*/
-/*    border-radius: 25%;*/
-/*    background-color: lightgrey;*/
-/*}*/
 
-#light-roast {
-    background-color: darkgoldenrod;
+
+#coffee-text {
+    height: 50%;
 }
+
+#new-coffee-name {
+    height: 50%;
+}
+
 main {
-    color: white;
+    color: whitesmoke;
     background: rgba(95, 79, 27, 0.7);
+    border: transparent 5px;
+    border-radius: 10%;
 }
 #jumbotron {
-    background: rgba(215, 210, 210, 0.7);
-    border: black solid 2px;
+    color: black;
+    background: rgba(172, 73, 7, 0.7);
+    border: black solid 10px;
     border-radius: 5px;
+}
+
+.card-body {
+    border: solid black 10px;
+    border-radius: 10%;
 }

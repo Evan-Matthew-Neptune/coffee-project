@@ -11,16 +11,17 @@
     <header>
         <div id="jumbotron" class="jumbotron jumbotron-fluid p-0 mt-3">
             <div class="container">
-                <h1 class="display-4">Welcome to Common Grounds!</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <h1 class="display-4 font-weight-bold">Welcome to Common Grounds!</h1>
+                <p class="lead font-weight-bold">Late night coding? We got you!</p>
             </div>
         </div>
     </header>
     <main class="row">
-
+        <h1 class="col-12 p-2">Coffee Menu</h1>
     <div class="col-6">
-        <h2 class="card-title">Roast Selector</h2>
+
         <form class="card-body">
+            <h2 class="card-title pb-1">Roast Selector</h2>
             <label for="roast-selection">What roast you want!?!?</label>
             <select id="roast-selection">
                 <option id="all">all</option>
@@ -28,27 +29,28 @@
                 <option id="medium">medium</option>
                 <option id="dark">dark</option>
             </select>
-            <input type="text" id="coffee-text">
+            <input type="text" placeholder="Coffee name" id="coffee-text">
             <input class="d-none" id="submit" type="submit">
         </form>
     </div>
 
     <div class="col-6">
-        <h2 class="card-title">Make your own coffee!</h2>
+
         <form class="card-body">
+            <h2 class="card-title">Make your own coffee!</h2>
             <label for="new-coffee-roast">Roast</label>
             <select id="new-coffee-roast">
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <br>
-            <label for="new-coffee-name">Coffee name</label>
-            <input type="text" id="new-coffee-name">
-            <input id="new-coffee-button" type="submit">
+
+<!--            <label for="new-coffee-name"></label>-->
+            <input placeholder="Coffee name" value="coffee name" type="text" id="new-coffee-name" >
+            <button id="new-coffee-button" type="submit">Lets make some coffee!</button>
+<!--            <input id="new-coffee-button" type="submit">-->
         </form>
     </div>
-
 <!-- this was tbody --><div class="justify-content-center d-flex flex-wrap col-12" id="coffees"></div>
 
     </main>
