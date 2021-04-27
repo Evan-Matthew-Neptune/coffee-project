@@ -1,5 +1,13 @@
-
-
+body {
+    color: white;
+    background-image: url("coffee-images/pexels-negative-space-34085.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+#new-coffee {
+    /*width: border-box;*/
+}
 /*.coffee {*/
 /*    border: solid black 1px;*/
 /*    border-radius: 25%;*/
@@ -8,4 +16,13 @@
 
 #light-roast {
     background-color: darkgoldenrod;
+}
+main {
+    color: white;
+    background: rgba(95, 79, 27, 0.7);
+}
+#jumbotron {
+    background: rgba(215, 210, 210, 0.7);
+    border: black solid 2px;
+    border-radius: 5px;
 }

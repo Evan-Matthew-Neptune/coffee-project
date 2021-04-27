@@ -7,12 +7,20 @@
     <script src="https://kit.fontawesome.com/c4e3a293bc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-center container row">
+<body class="text-center container">
+    <header>
+        <div id="jumbotron" class="jumbotron jumbotron-fluid p-0 mt-3">
+            <div class="container">
+                <h1 class="display-4">Welcome to Common Grounds!</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+    </header>
+    <main class="row">
 
-
-    <div class="col-8">
-        <h1 class="p-4">Welcome to Common Grounds!</h1>
-        <form>
+    <div class="col-6">
+        <h2 class="card-title">Roast Selector</h2>
+        <form class="card-body">
             <label for="roast-selection">What roast you want!?!?</label>
             <select id="roast-selection">
                 <option id="all">all</option>
@@ -21,13 +29,11 @@
                 <option id="dark">dark</option>
             </select>
             <input type="text" id="coffee-text">
-            <input id="submit" type="submit">
+            <input class="d-none" id="submit" type="submit">
         </form>
     </div>
 
-
-
-    <div class="col-4">
+    <div class="col-6">
         <h2 class="card-title">Make your own coffee!</h2>
         <form class="card-body">
             <label for="new-coffee-roast">Roast</label>
@@ -43,9 +49,9 @@
         </form>
     </div>
 
+<!-- this was tbody --><div class="justify-content-center d-flex flex-wrap col-12" id="coffees"></div>
 
-<!-- this was tbody --><div class="justify-content-center d-flex flex-wrap col-8" id="coffees"></div>
-
+    </main>
     <!-- custom js script -->
     <script src="main.js"></script>
     <!-- bootstrap -->
