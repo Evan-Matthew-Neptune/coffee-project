@@ -16,20 +16,52 @@ body {
     height: 50%;
 }
 
+#new-coffee-button {
+
+}
+
 main {
+    /*-webkit-text-stroke-color: black;*/
+    /*-webkit-text-stroke: 1px black;*/
     color: whitesmoke;
     background: rgba(95, 79, 27, 0.7);
     border: transparent 5px;
     border-radius: 10%;
+    box-shadow: 50px 50px 80px black;
 }
 #jumbotron {
     color: black;
     background: rgba(172, 73, 7, 0.7);
     border: black solid 10px;
     border-radius: 5px;
+    box-shadow: 50px 50px 80px black;
 }
 
 .card-body {
     border: solid black 10px;
     border-radius: 10%;
+    box-shadow: 5px 5px 10px black;
+}
+h2 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+h2:hover{
+    border: black solid 10px;
+    border-radius: 50%;
+    background-color: red;
+    transition: all 0.6s ease;
+}
+
+.coffee {
+    border: solid black 5px;
+    border-radius: 5px;
+    margin: 1em;
+}
+
+.coffee:hover {
+    background: rgba(172, 73, 7, 0.7);
+    border-radius: 50%;
+    transition: all 0.6s ease;
 }
