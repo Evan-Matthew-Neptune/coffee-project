@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<div class="d-none">' + coffee.id + '</div>';
-    html += '<div><h2>' + coffee.name + '</h2></div>';
+    html += '<div class="m-3"><h2>' + coffee.name + '</h2></div>';
     html += '<div><p>' + coffee.roast + '</p></div>';
     html += '</div>';
 
@@ -19,7 +19,9 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    if (e !== undefined) {
+        e.preventDefault(); // don't submit the form, we just want to update the data
+    }
     var searchInput = coffeeSearch.value;
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
@@ -33,15 +35,18 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-var newCoffeeName = document.getElementById('new-coffee-name');
-var newCoffeeRoast = document.getElementById('new-coffee-roast');
-function createCoffee(newCoffeeName, newCoffeeRoast) {
 
+function createCoffee(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var newCoffeeName = document.querySelector('#new-coffee-name').value;
+    var newCoffeeRoast = document.querySelector('#new-coffee-roast').value;
     var newCoffee = {
+        id: coffees.length + 1,
         name: newCoffeeName,
         roast: newCoffeeRoast
     }
-    return coffees.push(newCoffee);
+    coffees.push(newCoffee);
+    updateCoffees();
 }
 
 
@@ -66,16 +71,13 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
 var coffeeSearch = document.getElementById('coffee-text');
 var newCoffeeSubmit = document.querySelector('#new-coffee-button');
 
 
 tbody.innerHTML = renderCoffees(coffees);
 
-
-
-
+// Event listeners
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 coffeeSearch.addEventListener('keyup', updateCoffees);
