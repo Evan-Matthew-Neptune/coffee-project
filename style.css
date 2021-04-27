@@ -1,9 +1,11 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+
+/*.coffee {*/
+/*    border: solid black 1px;*/
+/*    border-radius: 25%;*/
+/*    background-color: lightgrey;*/
+/*}*/
+
+#light-roast {
+    background-color: darkgoldenrod;
 }
